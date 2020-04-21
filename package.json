@@ -1,0 +1,26 @@
+{
+  "name": "jsmp-infra-my-first-module",
+  "version": "1.0.3",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node -r esm src/tests.js",
+    "test:watch": "nodemon -r esm src/tests.js",
+    "build": "babel src -d build",
+    "clean": "rimraf ./build",
+    "test:build": "node build/tests.js",
+    "prepublishOnly": "concurrently --kill-others \"npm run build\" \"npm run clean\" \"npm run test\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "esm": "^3.2.25",
+    "rimraf": "^3.0.2"
+  }
+}
