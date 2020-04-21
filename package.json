@@ -1,7 +1,7 @@
 {
   "name": "jsmp-infra-my-first-module",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "My first npm module",
   "main": "src/index.js",
   "scripts": {
     "test": "node -r esm src/tests.js",
@@ -11,7 +11,13 @@
     "test:build": "node build/tests.js",
     "prepublishOnly": "concurrently --kill-others \"npm run build\" \"npm run clean\" \"npm run test\""
   },
-  "author": "",
+  "author": "Pavlo Kosiak",
+  "keywords": ["array concat", "string concat"],
+  "homepage": "https://github.com/kosyakpasha/first-npm-module",
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/kosyakpasha/first-npm-module"
+  },
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.15"
